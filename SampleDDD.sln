@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleDDDApp", "SampleDDDApp\SampleDDDApp.csproj", "{C9723480-8FCA-4B9A-A1EC-2B9203F4DFAA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Application", "1 - Application", "{4662F678-A41D-4582-830C-F918E77DC86E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", "{8D032853-B33B-43AD-8320-06CA3CC61B0A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Service", "3 - Service", "{DAB555D7-9B16-4AD7-998A-E2C687D34FF3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{CB64BDCE-3191-40B2-86E0-787A9DDC9D43}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", "{9716CE08-74F9-4681-A5C5-A0C3AAF2DEE3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 CrossCutting", "4.2 CrossCutting", "{3689635B-6056-4D48-B5ED-FB95228A4680}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9723480-8FCA-4B9A-A1EC-2B9203F4DFAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9723480-8FCA-4B9A-A1EC-2B9203F4DFAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9723480-8FCA-4B9A-A1EC-2B9203F4DFAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9723480-8FCA-4B9A-A1EC-2B9203F4DFAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C9723480-8FCA-4B9A-A1EC-2B9203F4DFAA} = {4662F678-A41D-4582-830C-F918E77DC86E}
+		{9716CE08-74F9-4681-A5C5-A0C3AAF2DEE3} = {CB64BDCE-3191-40B2-86E0-787A9DDC9D43}
+		{3689635B-6056-4D48-B5ED-FB95228A4680} = {CB64BDCE-3191-40B2-86E0-787A9DDC9D43}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CCFDC6A1-28F7-419A-BB05-43AC07242470}
+	EndGlobalSection
+EndGlobal
