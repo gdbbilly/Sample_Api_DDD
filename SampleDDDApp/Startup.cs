@@ -1,10 +1,18 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using SampleDDD.Domain.Entities;
+using SampleDDD.Domain.Interfaces;
+using SampleDDD.Infra.Data.Context;
+using SampleDDD.Infra.Data.Repository;
+using SampleDDD.Service.Services;
+using SampleDDDApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +33,24 @@ namespace SampleDDDApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            
+            //ADD DB CONTEXT
+            services.AddDbContext<SqlContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("ConnectionString")));
+
+            //REPOSITORIES
+            services.AddScoped<IBaseRepository<User>, BaseRepository<User>>();
+            
+            //SERVICES
+            services.AddScoped<IBaseService<User>, BaseService<User>>();
+
+            //AUTOMAPPER
+            services.AddSingleton(new MapperConfiguration(config =>
+            {
+                config.CreateMap<CreateUserModel, User>();
+                config.CreateMap<UpdateUserModel, User>();
+                config.CreateMap<User, UserModel>();
+            }).CreateMapper());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

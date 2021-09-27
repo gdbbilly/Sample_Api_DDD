@@ -2,11 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SampleDDD.Domain\SampleDDD.Domain.csproj" />
+    <ProjectReference Include="..\SampleDDD.Infra.Data\SampleDDD.Infra.Data.csproj" />
+    <ProjectReference Include="..\SampleDDD.Service\SampleDDD.Service.csproj" />
   </ItemGroup>
 
 
